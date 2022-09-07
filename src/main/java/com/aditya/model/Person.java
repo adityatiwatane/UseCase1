@@ -1,4 +1,4 @@
-package com.manta.model;
+package com.aditya.model;
 
 
 import javax.persistence.Entity;
@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@Data
 public class Person {
 
     @Id
@@ -16,6 +15,14 @@ public class Person {
     private String name;
 
     private String mobile;
+
+    public Person() {}
+
+    public Person(String name, String mobile) {
+        super();
+        this.name = name;
+        this.mobile = mobile;
+    }
 
     public Long getId() {
         return id;

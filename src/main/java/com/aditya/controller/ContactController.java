@@ -1,7 +1,12 @@
-package com.manta.controller;
+package com.aditya.controller;
 
-import com.manta.model.Contact;
-import com.manta.service.ContactService;
+import com.aditya.model.Contact;
+import com.aditya.service.ContactService;
+
+import org.springframework.http.HttpStatus;
+
+import org.springframework.http.ResponseEntity;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +23,9 @@ public class ContactController {
 
     @RequestMapping("/contact/save")
     protected Contact save(@RequestBody Contact contact) {
-        return contactService.save(contact);
+        Contact _contact = contactService.save(contact);
+
+        return new ResponseEntity<>(_contact, HttpStatus.CREATED);
     }
 
     @RequestMapping("/contact/retrieve/{id}")

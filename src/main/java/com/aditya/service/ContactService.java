@@ -1,6 +1,6 @@
-package com.manta.service;
+package com.aditya.service;
 
-import com.manta.model.Contact;
+import com.aditya.model.Contact;
 
 import java.util.List;
 

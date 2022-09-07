@@ -1,6 +1,6 @@
-package com.manta.repository;
+package com.aditya.repository;
 
-import com.manta.model.Contact;
+import com.aditya.model.Contact;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

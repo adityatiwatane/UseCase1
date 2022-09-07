@@ -1,7 +1,7 @@
-package com.manta.service;
+package com.aditya.service;
 
-import com.manta.model.Contact;
-import com.manta.repository.ContactRepository;
+import com.aditya.model.Contact;
+import com.aditya.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
