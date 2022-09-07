@@ -2,12 +2,12 @@ package com.aditya.service;
 
 import com.aditya.model.Person;
 
-import java.util.List;
+import java.util.*;
 
 public interface ContactService {
 
     Person save(Person contact);
 
-    Person findContactById(Long id);
+    Optional<Person> findContactById(Long id);
 
 }
