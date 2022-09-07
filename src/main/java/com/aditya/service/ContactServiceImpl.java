@@ -20,8 +20,14 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public Optional<Person> findContactById(Long id) {
-        return contactRepository.findById(id);
+    public Person findContactById(Long id) {
+
+        try {
+            return contactRepository.findById(id);
+        } catch(Exception e) {
+            
+        }
+
     }
 
 
