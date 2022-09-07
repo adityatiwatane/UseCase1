@@ -23,9 +23,12 @@ public class ContactServiceImpl implements ContactService {
     public Person findContactById(Long id) {
 
         try {
-            return contactRepository.findById(id);
+            if (contactRepository.findById(id) == null) {
+                return null;
+            } 
+                return contactRepository.findById(id);
         } catch(Exception e) {
-            
+
         }
 
     }
