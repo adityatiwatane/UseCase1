@@ -1,6 +1,6 @@
 package com.aditya.controller;
 
-import com.aditya.model.Contact;
+import com.aditya.model.Person;
 import com.aditya.service.ContactService;
 
 import org.springframework.http.HttpStatus;
@@ -22,14 +22,14 @@ public class ContactController {
     private ContactService contactService;
 
     @RequestMapping("/contact/save")
-    protected Contact save(@RequestBody Contact contact) {
-        Contact _contact = contactService.save(contact);
+    protected Person save(@RequestBody Person contact) {
+        Person _contact = contactService.save(contact);
 
         return new ResponseEntity<>(_contact, HttpStatus.CREATED);
     }
 
     @RequestMapping("/contact/retrieve/{id}")
-    protected Contact findById(@PathVariable Long id) {
+    protected Person findById(@PathVariable Long id) {
         return contactService.findContactById(id);
     }
 

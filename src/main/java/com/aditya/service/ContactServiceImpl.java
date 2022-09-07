@@ -1,6 +1,6 @@
 package com.aditya.service;
 
-import com.aditya.model.Contact;
+import com.aditya.model.Person;
 import com.aditya.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -15,13 +15,13 @@ public class ContactServiceImpl implements ContactService {
     private ContactRepository contactRepository;
 
     @Override
-    public Contact save(Contact contact) {
+    public Person save(Person contact) {
         return contactRepository.save(contact);
     }
 
     @Override
-    public Contact findContactById(Long id) {
-        return contactRepository.findOne(id);
+    public Person findContactById(Long id) {
+        return contactRepository.findById(id);
     }
 
 
