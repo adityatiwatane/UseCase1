@@ -29,7 +29,7 @@ public class ContactController {
     }
 
     @RequestMapping("/contact/retrieve/{id}")
-    protected Person findById(@PathVariable Long id) {
+    protected optional<Person> findById(@PathVariable Long id) {
 
         Optional<Person> contact = contactService.findContactById(id);
 

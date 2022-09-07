@@ -20,7 +20,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public Person findContactById(Long id) {
+    public Optional<Person> findContactById(Long id) {
 
         try {
             if (contactRepository.findById(id) == null) {
