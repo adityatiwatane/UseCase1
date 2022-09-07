@@ -16,24 +16,15 @@ public class ContactController {
     @Autowired
     private ContactService contactService;
 
-    @RequestMapping("/contacts")
-    protected List findAll() {
-        return contactService.findAllContacts();
-    }
-
-    @RequestMapping("/contacts/save")
+    @RequestMapping("/contact/save")
     protected Contact save(@RequestBody Contact contact) {
         return contactService.save(contact);
     }
 
-    @RequestMapping("/contacts/{id}")
+    @RequestMapping("/contact/retrieve/{id}")
     protected Contact findById(@PathVariable Long id) {
         return contactService.findContactById(id);
     }
 
-    @RequestMapping("/contacts/{id}/delete")
-    protected Contact delete(@PathVariable Long id) {
-        return contactService.deleteContact(id);
-    }
 
 }
