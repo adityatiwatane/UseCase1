@@ -22,15 +22,7 @@ public class ContactServiceImpl implements ContactService {
     @Override
     public Optional<Person> findContactById(Long id) {
 
-        try {
-            if (contactRepository.findById(id) == null) {
-                return null;
-            } 
-                return contactRepository.findById(id);
-        } catch(Exception e) {
-
-        }
-
+        return contactRepository.findById(id);
     }
 
 
