@@ -22,7 +22,7 @@ public class ContactController {
     private ContactService contactService;
 
     @RequestMapping("/contact/save")
-    protected Person save(@RequestBody Person contact) {
+    protected ResponseEntity<Person> save(@RequestBody Person contact) {
         Person _contact = contactService.save(contact);
 
         return new ResponseEntity<>(_contact, HttpStatus.CREATED);
